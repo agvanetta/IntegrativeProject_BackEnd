@@ -2,7 +2,7 @@ package IntegrativeProject.DentalClinic.Service.impl;
 
 ;
 
-import IntegrativeProject.DentalClinic.DTO.PatientDTO;
+import IntegrativeProject.DentalClinic.Dto.PatientDTO;
 import IntegrativeProject.DentalClinic.Entities.Patient;
 import IntegrativeProject.DentalClinic.Repository.IPatientRepository;
 import IntegrativeProject.DentalClinic.Service.IPatientService;

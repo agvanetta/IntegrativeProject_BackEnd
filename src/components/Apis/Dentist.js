@@ -34,7 +34,6 @@ state={
 
 peticionGet=()=>{
 axios.get(urlTodos).then(response=>{
-    console.log(response)
   this.setState({data: response.data});
 }).catch(error=>{
   console.log(error.message);
@@ -88,7 +87,7 @@ await this.setState({
     [e.target.name]: e.target.value
   }
 });
-console.log(this.state.form);
+//console.log(this.state.form);
 }
 
   componentDidMount() {

@@ -1,6 +1,6 @@
 package IntegrativeProject.DentalClinic.Service.impl;
 
-import IntegrativeProject.DentalClinic.DTO.DentistDTO;
+import IntegrativeProject.DentalClinic.Dto.DentistDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

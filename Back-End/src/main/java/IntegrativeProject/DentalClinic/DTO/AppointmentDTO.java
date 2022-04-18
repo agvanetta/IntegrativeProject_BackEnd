@@ -1,4 +1,4 @@
-package IntegrativeProject.DentalClinic.DTO;
+package IntegrativeProject.DentalClinic.Dto;
 
 import IntegrativeProject.DentalClinic.Entities.Dentist;
 import IntegrativeProject.DentalClinic.Entities.Patient;

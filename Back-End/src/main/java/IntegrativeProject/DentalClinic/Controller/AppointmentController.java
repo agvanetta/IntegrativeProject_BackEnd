@@ -1,6 +1,6 @@
 package IntegrativeProject.DentalClinic.Controller;
 
-import IntegrativeProject.DentalClinic.DTO.AppointmentDTO;
+import IntegrativeProject.DentalClinic.Dto.AppointmentDTO;
 import IntegrativeProject.DentalClinic.Service.impl.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,6 @@
 package IntegrativeProject.DentalClinic.Service;
 
-import IntegrativeProject.DentalClinic.DTO.DentistDTO;
+import IntegrativeProject.DentalClinic.Dto.DentistDTO;
 
 public interface IDentistService extends ICRUDService<DentistDTO> {
 }

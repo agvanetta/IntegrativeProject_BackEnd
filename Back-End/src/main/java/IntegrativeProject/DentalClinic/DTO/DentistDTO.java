@@ -1,4 +1,4 @@
-package IntegrativeProject.DentalClinic.DTO;
+package IntegrativeProject.DentalClinic.Dto;
 
 import lombok.Data;
 

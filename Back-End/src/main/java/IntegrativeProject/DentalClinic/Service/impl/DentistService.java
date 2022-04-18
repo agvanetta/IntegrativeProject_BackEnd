@@ -1,6 +1,6 @@
 package IntegrativeProject.DentalClinic.Service.impl;
 
-import IntegrativeProject.DentalClinic.DTO.DentistDTO;
+import IntegrativeProject.DentalClinic.Dto.DentistDTO;
 import IntegrativeProject.DentalClinic.Entities.Dentist;
 import IntegrativeProject.DentalClinic.Repository.IDentistRepository;
 import IntegrativeProject.DentalClinic.Service.IDentistService;

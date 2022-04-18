@@ -1,6 +1,6 @@
 package IntegrativeProject.DentalClinic.Service.impl;
 
-import IntegrativeProject.DentalClinic.DTO.AppointmentDTO;
+import IntegrativeProject.DentalClinic.Dto.AppointmentDTO;
 import IntegrativeProject.DentalClinic.Entities.Appointment;
 import IntegrativeProject.DentalClinic.Repository.IAppointmentRespository;
 import IntegrativeProject.DentalClinic.Service.IAppointmentService;

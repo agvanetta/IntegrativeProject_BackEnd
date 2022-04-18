@@ -1,6 +1,6 @@
 package IntegrativeProject.DentalClinic.Controller;
 
-import IntegrativeProject.DentalClinic.DTO.DentistDTO;
+import IntegrativeProject.DentalClinic.Dto.DentistDTO;
 import IntegrativeProject.DentalClinic.Service.impl.DentistService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

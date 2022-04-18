@@ -1,6 +1,6 @@
 package IntegrativeProject.DentalClinic.Service;
 
-import IntegrativeProject.DentalClinic.DTO.AppointmentDTO;
+import IntegrativeProject.DentalClinic.Dto.AppointmentDTO;
 
 public interface IAppointmentService extends ICRUDService<AppointmentDTO> {
 }

@@ -1,4 +1,4 @@
-package IntegrativeProject.DentalClinic;
+package IntegrativeProject.DentalClinic.Exception;
 
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
