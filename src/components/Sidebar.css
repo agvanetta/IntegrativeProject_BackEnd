@@ -1,0 +1,26 @@
+.sidebar{
+    background-color: #b09f85d8;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sidebar__options{
+    font-size: 18px;
+    padding: 1px 25px;
+}
+
+.sidebar__options:hover{
+    color: rgb(109, 103, 95);
+}
+
+
+.links{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.links:hover{
+    color: rgb(73, 46, 4);
+}
