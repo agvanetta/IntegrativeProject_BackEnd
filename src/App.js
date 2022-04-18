@@ -13,6 +13,7 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/" element={<>{" "} <Header/> <Sidebar/> <Dentist/>  {" "}</>}  />
+          <Route path="/integrativeproject_backend" element={<>{" "} <Header/> <Sidebar/> <Dentist/>  {" "}</>}  />
           <Route path="/dentist" element={<>{" "}<Header /> <Sidebar/> <Dentist/> {" "}</> }  />
           <Route path="/patient"    element={  <>  {" "} <Header /> <Sidebar/> <Patient/>{" "}  </> } />
           <Route path="/appointment" element={   <>{" "}  <Header /> <Sidebar/> <Appointment/> {" "} </> } />
