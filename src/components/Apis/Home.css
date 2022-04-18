@@ -19,3 +19,9 @@
     text-align: center;
     vertical-align: middle;
 }
+
+.home__wait{
+    background-color: #f8f8f8;
+    height:70vh ;
+    mask-image: linear-gradient(to top, transparent 1%, black 15%);
+}
