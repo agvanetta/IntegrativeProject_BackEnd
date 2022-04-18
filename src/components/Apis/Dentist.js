@@ -24,12 +24,6 @@ state={
     register: '',
     tipoModal: ''
   },
-  formv2:{
-    name: '',
-    lastname: '',
-    register: '',
-    tipoModal: ''
-  }
 }
 
 peticionGet=()=>{

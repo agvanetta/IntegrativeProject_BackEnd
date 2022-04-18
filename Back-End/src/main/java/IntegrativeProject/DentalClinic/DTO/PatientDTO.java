@@ -13,7 +13,4 @@ public class PatientDTO {
     private Integer dni;
     private LocalDate initDate;
     private AddressDTO address;
-
-
-
 }

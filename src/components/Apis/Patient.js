@@ -6,10 +6,10 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import "./Home.css";
 
-const urlTodos="http://localhost:8080/dentists/lists";
-const urlPost="http://localhost:8080/dentists/register";
-const urlDelete="http://localhost:8080/dentists/";
-const urlPut="http://localhost:8080/dentists/update";
+const urlTodos="http://localhost:8080/patients/lists";
+const urlPost="http://localhost:8080/patients/register";
+const urlDelete="http://localhost:8080/patients/";
+const urlPut="http://localhost:8080/patients/update";
 
 
 class Patient extends Component {
@@ -21,20 +21,22 @@ state={
     id: '',
     name: '',
     lastname: '',
-    register: '',
+    email: '',
+    dni:'',
+    initDate:'',
+    address:{
+      id:'',
+      street:'',
+      number:'',
+      city:''
+    },
     tipoModal: ''
   },
-  formv2:{
-    name: '',
-    lastname: '',
-    register: '',
-    tipoModal: ''
-  }
 }
 
 peticionGet=()=>{
 axios.get(urlTodos).then(response=>{
-    console.log(response)
+   console.log(response)
   this.setState({data: response.data});
 }).catch(error=>{
   console.log(error.message);
@@ -74,8 +76,15 @@ seleccionarCliente=(data)=>{
     tipoModal: 'actualizar',
     form: {
       id: data.id,
-      nombre: data.nombre,
-      apellido: data.apellido,
+      lastname: data.lastname,
+      email: data.email,
+      dni : data.dni,
+      initDate: data.initDate,
+      address: {
+        street: data.street,
+        number: data.number,
+        city: data.city
+      }
     }
   })
 }
@@ -88,7 +97,7 @@ await this.setState({
     [e.target.name]: e.target.value
   }
 });
-console.log(this.state.form);
+console.log(this.state.form.address);
 }
 
   componentDidMount() {
@@ -109,8 +118,9 @@ console.log(this.state.form);
           <th>ID</th>
           <th>Name</th>
           <th>Lastname</th>
-          <th>Register</th>
-          <th>Actions</th>
+          <th>Email</th>
+          <th>Dni</th>
+          <th>Init Date</th>
         </tr>
       </thead>
       <tbody>
@@ -121,7 +131,12 @@ console.log(this.state.form);
           <td>{data.id}</td>
           <td>{data.name}</td>
           <td>{data.lastname}</td>
-          <td>{data.register}</td>
+          <td>{data.email}</td>
+          <td>{data.dni}</td>
+          <td>{data.initDate}</td>
+          <td>{data.street}</td>
+          <td>{data.number}</td>
+          <td>{data.city}</td>
           <td>
                 <button className="btn btn-primary" id="btn"  onClick={()=>{this.seleccionarCliente(data); this.modalInsertar()}}><FontAwesomeIcon icon={faEdit}/></button>
                 {"   "}
@@ -150,8 +165,23 @@ console.log(this.state.form);
                     <label htmlFor="nombre">Lastname</label>
                     <input className="form-control" type="text" name="lastname" id="lastname" onChange={this.handleChange} value={form?form.lastname: ''}/>
                     <br />
-                    <label htmlFor="nombre">Register</label>
-                    <input className="form-control" type="text" name="register" id="register" onChange={this.handleChange} value={form?form.register: ''}/>
+                    <label htmlFor="nombre">Email</label>
+                    <input className="form-control" type="text" name="email" id="email" onChange={this.handleChange} value={form?form.email: ''}/>
+                    <br />
+                    <label htmlFor="nombre">Dni</label>
+                    <input className="form-control" type="text" name="dni" id="dni" onChange={this.handleChange} value={form?form.dni: ''}/>
+                    <br />
+                    <label htmlFor="nombre">Init Date</label>
+                    <input className="form-control" type="text" name="initDate" id="initDate" placeholder="YYYY-MM-DD" onChange={this.handleChange} value={form?form.initDate: ''}/>
+                    <br />
+                    <label htmlFor="nombre">Street</label>
+                    <input className="form-control" type="text" name="street" id="street" onChange={this.handleChange} value={form?form.street: ''}/>
+                    <br />
+                    <label htmlFor="nombre">Number</label>
+                    <input className="form-control" type="text" name="number" id="number" onChange={this.handleChange} value={ form?form.number: ''}/>
+                    <br />
+                    <label htmlFor="nombre">City</label>
+                    <input className="form-control" type="text" name="city" id="city" onChange={this.handleChange} value={form?form.city: ''}/>
                     <br />
                   </div>
                 </ModalBody>

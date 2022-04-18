@@ -9,12 +9,9 @@ import java.time.LocalDate;
 
 @Data
 public class AppointmentDTO {
-
     private Integer id;
     private Patient patient;
     private Dentist dentist;
     private LocalDate date;
     private Time time;
-
-
 }
