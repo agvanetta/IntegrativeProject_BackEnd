@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class PatientDTO {
     private Integer id;
     private String name;
-    private String surname;
+    private String lastname;
     private String email;
     private Integer dni;
     private LocalDate initDate;

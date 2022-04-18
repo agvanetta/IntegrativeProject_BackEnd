@@ -16,82 +16,66 @@ class PatientServiceTest {
 
     @Test
     public void testCreatePatient() {
-
         PatientDTO patientDTO = new PatientDTO();
-        patientDTO.setName("Pedro");
-        patientDTO.setSurname("Castro");
-        patientDTO.setDni(1324);
+        patientDTO.setName("Agustin");
+        patientDTO.setLastname("Vanetta");
+        patientDTO.setDni(377732203);
         patientService.create(patientDTO);
-
-        PatientDTO patientPedro = patientService.findById(1);
-
-
-        assertTrue(patientPedro != null);
-
+        PatientDTO patient1 = patientService.findById(1);
+        assertTrue(patient1 != null);
     }
 
     @Test
     public void testUpdatePatient() {
         PatientDTO patientDTO = new PatientDTO();
-        patientDTO.setName("Pedro");
-        patientDTO.setSurname("Castro");
-        patientDTO.setDni(1324);
-
+        patientDTO.setName("Giovanni");
+        patientDTO.setLastname("Vanetta");
+        patientDTO.setDni(57353461);
         patientService.create(patientDTO);
 
-        PatientDTO patientPedro = patientService.findById(1);
-        patientPedro.setName("Pedro");
-        patientPedro.setSurname("Castro");
-        patientPedro.setDni(1324);
+        PatientDTO patientTest = patientService.findById(1);
+        patientTest.setName("Giovanni");
+        patientTest.setLastname("Vanetta");
+        patientTest.setDni(57353461);
+        patientService.update(patientTest);
 
-        patientService.update(patientPedro);
-
-        PatientDTO patientPedro2 = patientService.findById(1);
-
-        assertTrue(patientPedro2.getName().equals("Pedro"));
+        PatientDTO patientTest2 = patientService.findById(1);
+        assertTrue(patientTest2.getName().equals("Giovanni"));
     }
 
     @Test
     public void testFindAll() {
         PatientDTO patientDTO = new PatientDTO();
-        patientDTO.setName("Pedro");
-        patientDTO.setSurname("Castro");
-
+        patientDTO.setName("Agustin");
+        patientDTO.setLastname("Vanetta");
         patientService.create(patientDTO);
+        PatientDTO patientTest = patientService.findById(1);
 
-        PatientDTO patientPedro = patientService.findById(1);
-
-        assertTrue(patientPedro != null);
+        assertTrue(patientTest != null);
     }
 
     @Test
     public void testFindById() {
         PatientDTO patientDTO = new PatientDTO();
-        patientDTO.setName("Pedro");
-        patientDTO.setSurname("Castro");
-        patientDTO.setDni(1324);
-
+        patientDTO.setName("Agustin");
+        patientDTO.setLastname("Vanetta");
+        patientDTO.setDni(37732203);
         patientService.create(patientDTO);
+        PatientDTO patientTest = patientService.findById(1);
 
-        PatientDTO patientPedro = patientService.findById(1);
-
-        assertTrue(patientPedro != null);
+        assertTrue(patientTest != null);
     }
 
     @Test
     public void testDeletePatient() {
         PatientDTO patientDTO = new PatientDTO();
         patientDTO.setId(1);
-        patientDTO.setName("Pedro");
-        patientDTO.setSurname("Castro");
-
+        patientDTO.setName("Agustin");
+        patientDTO.setLastname("Vanetta");
         patientService.create(patientDTO);
         patientService.deleteById(1);
+        PatientDTO patientTest = patientService.findById(1);
 
-        PatientDTO patientPedro = patientService.findById(1);
-
-        assertTrue(patientPedro == null);
-
+        assertTrue(patientTest == null);
     }
-
 }

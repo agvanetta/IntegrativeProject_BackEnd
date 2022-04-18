@@ -17,27 +17,23 @@ class DentistServiceTest {
 
     public void testCreateDentist(){
         DentistDTO dentistDTO = new DentistDTO();
-        dentistDTO.setName("Pedro");
-        dentistDTO.setLastname("Perez");
-        dentistDTO.setRegister(456);
+        dentistDTO.setName("Giovanni");
+        dentistDTO.setLastname("Vanetta");
+        dentistDTO.setRegister(11210);
         dentistService.create(dentistDTO);
-
         dentistService.findById(1);
 
-        assertTrue(dentistService.findById(1).getName().equals("Pedro"));
-
+        assertTrue(dentistService.findById(1).getName().equals("Giovanni"));
     }
 
     @Test
     public void testDeleteDentist(){
         DentistDTO dentistDTO = new DentistDTO();
-        dentistDTO.setName("Pedro");
-        dentistDTO.setLastname("Perez");
-        dentistDTO.setRegister(456);
-
+        dentistDTO.setName("Giovanni");
+        dentistDTO.setLastname("Vanetta");
+        dentistDTO.setRegister(11210);
         dentistService.create(dentistDTO);
         dentistService.deleteById(2);
-
         DentistDTO dentistTest = dentistService.findById(2);
 
         assertTrue(dentistTest == null);
@@ -46,37 +42,34 @@ class DentistServiceTest {
     @Test
     public void testFindById() {
         DentistDTO dentistDTO = new DentistDTO();
-        dentistDTO.setName("Pedro");
-        dentistDTO.setLastname("Perez");
-        dentistDTO.setRegister(456);
+        dentistDTO.setName("Giovanni");
+        dentistDTO.setLastname("Vanetta");
+        dentistDTO.setRegister(11210);
         dentistService.create(dentistDTO);
-
         dentistService.findById(1);
 
-        assertTrue(dentistService.findById(1).getName().equals("Pedro"));
+        assertTrue(dentistService.findById(1).getName().equals("Giovanni"));
     }
 
     @Test
     public void testUpdateDentist(){
         DentistDTO dentistDTO = new DentistDTO();
-        dentistDTO.setName("Pedro");
-        dentistDTO.setLastname("Perez");
-        dentistDTO.setRegister(456);
+        dentistDTO.setName("Giovanni");
+        dentistDTO.setLastname("Vanetta");
+        dentistDTO.setRegister(11210);
         dentistService.create(dentistDTO);
-
         dentistService.update(dentistDTO);
 
-        assertTrue(dentistService.findById(1).getName().equals("Pedro"));
+        assertTrue(dentistService.findById(1).getName().equals("Giovanni"));
     }
 
     @Test
     public void testFindAll(){
         DentistDTO dentistDTO = new DentistDTO();
-        dentistDTO.setName("Pedro");
-        dentistDTO.setLastname("Perez");
-        dentistDTO.setRegister(456);
+        dentistDTO.setName("Giovanni");
+        dentistDTO.setLastname("Vanetta");
+        dentistDTO.setRegister(11210);
         dentistService.create(dentistDTO);
-
         dentistService.findAll();
 
         assertTrue(dentistService.findAll().size()>0);

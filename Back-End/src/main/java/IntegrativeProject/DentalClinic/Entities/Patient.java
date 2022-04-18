@@ -19,7 +19,7 @@ public class Patient {
     private Integer id;
 
     private String name;
-    private String surname;
+    private String lastname;
     private String email;
     private int dni;
     private LocalDate initDate;

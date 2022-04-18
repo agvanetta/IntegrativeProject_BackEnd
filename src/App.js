@@ -6,7 +6,6 @@ import Appointment from "./components/Apis/Appointment";
 import Sidebar from "./components/Sidebar";
 // import Footer from "./components/Footer";
 
-
 function App() {
   return (
     <Router  Redirect to="/" >
