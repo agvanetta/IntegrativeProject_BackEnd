@@ -1,0 +1,33 @@
+2022-04-14 12:40:13 ERROR GlobalExceptionHandler:18 - Request method 'POST' not supported
+2022-04-17 10:22:40 ERROR GlobalExceptionHandler:18 - JSON parse error: Cannot deserialize value of type `int` from String "casasa": not a valid `int` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String "casasa": not a valid `int` value
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 70] (through reference chain: PatientDTO["dni"])
+2022-04-17 18:53:09 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+2022-04-17 18:53:13 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+2022-04-17 18:53:18 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+2022-04-17 18:53:22 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+2022-04-17 18:53:32 ERROR GlobalExceptionHandler:18 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+2022-04-17 18:57:50 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 18:58:30 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:00:12 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:40 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:41 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:41 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:41 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:41 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:42 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:42 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:42 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:43 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:43 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:44 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:45 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:45 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:45 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:46 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:46 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:46 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:46 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-17 19:04:47 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-18 09:55:19 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
+2022-04-18 09:59:55 ERROR GlobalExceptionHandler:18 - JSON parse error: Invalid numeric value: Leading zeroes not allowed; nested exception is com.fasterxml.jackson.core.JsonParseException: Invalid numeric value: Leading zeroes not allowed
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 17]

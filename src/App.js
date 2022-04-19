@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Patient from "./components/Apis/Patient";
 import Appointment from "./components/Apis/Appointment";
 import Sidebar from "./components/Sidebar";
+import Login from "./components/Login";
 // import Footer from "./components/Footer";
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <Router  Redirect to="/" >
       <div className="app">
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<>{" "} <Header/> <Sidebar/> <Dentist/>  {" "}</>}  />
-          <Route path="/integrativeproject_backend" element={<>{" "} <Header/> <Sidebar/> <Dentist/>  {" "}</>}  />
+          <Route path="/integrativeproject_backend" element={<Login />}  />
           <Route path="/dentist" element={<>{" "}<Header /> <Sidebar/> <Dentist/> {" "}</> }  />
           <Route path="/patient"    element={  <>  {" "} <Header /> <Sidebar/> <Patient/>{" "}  </> } />
           <Route path="/appointment" element={   <>{" "}  <Header /> <Sidebar/> <Appointment/> {" "} </> } />
