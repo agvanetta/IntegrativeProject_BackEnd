@@ -31,3 +31,4 @@
 2022-04-18 09:55:19 ERROR GlobalExceptionHandler:18 - Request method 'PUT' not supported
 2022-04-18 09:59:55 ERROR GlobalExceptionHandler:18 - JSON parse error: Invalid numeric value: Leading zeroes not allowed; nested exception is com.fasterxml.jackson.core.JsonParseException: Invalid numeric value: Leading zeroes not allowed
  at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 17]
+2022-04-20 02:30:41 ERROR GlobalExceptionHandler:18 - No class IntegrativeProject.DentalClinic.Entities.Dentist entity with id 1 exists!

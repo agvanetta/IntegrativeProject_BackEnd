@@ -24,11 +24,23 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-                .authorizeHttpRequests()
+              /*    .authorizeHttpRequests()
                 .antMatchers("/user/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated().and()
+                .formLogin().and()
+                .httpBasic();*/
+              .authorizeRequests()
+                .antMatchers("/dentists/**","/patients/**" ).hasAuthority("ADMIN")
+                .antMatchers("/appointments/**").hasAuthority("USER")
+                .antMatchers("/dentistsList.html","/dentistNew.html","/patientsList.html","/patientNew.html")
+                .hasAuthority("ADMIN")
+                .antMatchers("/appointmentsList.html","/appointmentNew.html")
+                .hasAuthority("USER")
+                .anyRequest()
+                .authenticated()
+                .and()
                 .formLogin().and()
                 .httpBasic();
     }

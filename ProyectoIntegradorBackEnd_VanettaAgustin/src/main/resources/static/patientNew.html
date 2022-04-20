@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Dentist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/post_patient.js"></script>
+    <link rel="stylesheet" href="./styles/home.css" />
+</head>
+<body>
+<div class="home__bar"> Management system V2 (Dental Clinic) </div>
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="/patientsList.html">Patients administration</a>
+            </li>
+        </ul>
+<div class="row">
+    <div class="col-sm-7" style="background-color:#e9ecef; padding:10px; border-radius:3px">
+        <h3>Add Patient</h3>
+        <form id="add_new_dentist">
+            <div class="form-group">
+                <label class="control-label" for="name">Name:</label>
+                <input type="text" class="form-control" id="name"
+                       placeholder="Enter the name" name="name" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="lastname">Lastname:</label>
+                <input type="text" class="form-control" id="lastname"
+                       placeholder="Enter the lastname" name="lastname" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="email">Email:</label>
+                <input type="text" class="form-control" id="email"
+                       placeholder="Enter the email" name="email" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="dni">Dni:</label>
+                <input type="text" class="form-control" id="dni"
+                       placeholder="Enter the dni" name="dni" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="initDate">Ingress:</label>
+                <input type="text" class="form-control" id="initDate"
+                       placeholder="YYYY-MM-DD" name="initDate" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="street">Street:</label>
+                <input type="text" class="form-control" id="street"
+                       placeholder="Enter the street" name="street" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="number">Number:</label>
+                <input type="text" class="form-control" id="number"
+                       placeholder="Enter the number" name="number" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="city">City:</label>
+                <input type="text" class="form-control" id="city"
+                       placeholder="Enter the city" name="register" required></input>
+            </div>
+
+            <button type="submit" class="btn btn-danger" id="btn-add-new-student">Save</button>
+        </form>
+        <div id="response" style="display:none; margin-top:10px">
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

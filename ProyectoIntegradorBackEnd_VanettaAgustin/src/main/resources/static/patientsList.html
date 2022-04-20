@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Patients</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/get_patient.js"></script>
+    <script type="text/javascript" src="/js/put_patient.js"></script>
+    <script type="text/javascript" src="/js/delete_patient.js"></script>
+    <link rel="stylesheet" href="./styles/home.css" />
+</head>
+<body>
+<div class="home__bar"> Management system V2 (Dental Clinic) </div>
+<div class="container" >
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/patientsList.html">All</a>
+        </li>
+    </ul>
+
+    <div id="div_student_table">
+        <h1>Patients</h1>
+        <div class="row col-md-6 table-responsive" id="container">
+            <table id="dentistTable" class="table table-striped">
+                <thead>
+                <tr id="table">
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Dni</th>
+                    <th>Ingress</th>
+                    <th>Street</th>
+                    <th>Number</th>
+                    <th>City</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="display: none;
+											background-color:#e6fffa; padding:10px; border-radius:3px"
+             id="div_dentist_updating">
+            <form id="update_dentist_form">
+                <div class="form-group">
+                    <label >Id:</label>
+                    <input type="text" class="form-control" id="dentist_id" readonly>
+                </div>
+                <div class="form-group">
+                    <label >Name:</label>
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label >LastName:</label>
+                    <input type="text" class="form-control" placeholder="Apellido" id="apellido">
+                </div>
+                <div class="form-group">
+                    <label >Register:</label>
+                    <input type="text" class="form-control" placeholder="Email" id="email">
+                </div>
+                <div class="form-group">
+                    <label >Register:</label>
+                    <input type="text" class="form-control" placeholder="Dni" id="dni">
+                </div>
+                <div class="form-group">
+                    <label >Register:</label>
+                    <input type="text" class="form-control" placeholder="InitDate" id="initDate">
+                </div>
+                <div class="form-group">
+                    <label >Register:</label>
+                    <input type="text" class="form-control" placeholder="Street" id="street">
+                </div>
+                <div class="form-group">
+                    <label >Register:</label>
+                    <input type="text" class="form-control" placeholder="Number" id="number">
+                </div>
+                <div class="form-group">
+                    <label >Register:</label>
+                    <input type="text" class="form-control" placeholder="City" id="city">
+                </div>
+                <button type="submit" class="btn btn-primary">Change</button>
+            </form>
+            <div id="response" style="display:none; margin:10px">
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+</body>
+</html>

@@ -10,6 +10,4 @@ public class AddressDTO {
     private Integer number;
     private String city;
 
-
-
 }
