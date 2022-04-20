@@ -46,8 +46,8 @@ window.addEventListener('load', function () {
           //luego los datos del estudiante
           //como ultima columna el boton eliminar
          dentistRow.innerHTML = '<td>' + updateButton + '</td>' +
-                              '<td class=\"td_first_name\">' + dentist.patient.name.toUpperCase() +", "+ dentist.patient.lastname.toUpperCase() + '</td>' +
-                              '<td class=\"td_last_name\">' + dentist.dentist.name.toUpperCase() +", "+ dentist.dentist.lastname.toUpperCase() + '</td>' +
+                              '<td class=\"td_first_name\">' + dentist.patient.id + '</td>' +
+                              '<td class=\"td_last_name\">' + dentist.dentist.id + '</td>' +
                               '<td class=\"td_register\">' + dentist.date + '</td>' +
                               '<td class=\"td_register\">' + dentist.time + '</td>' +
                               '<td>' + deleteButton + '</td>';
