@@ -32,12 +32,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .formLogin().and()
                 .httpBasic();*/
               .authorizeRequests()
-                .antMatchers("/dentists/**","/patients/**" ).hasAuthority("ADMIN")
-                .antMatchers("/appointments/**").hasAuthority("USER")
+                .antMatchers("/dentists/**","/patients/**","/appointments/**" ).hasAuthority("ADMIN")
+                /*.antMatchers("/appointments/**").hasAuthority("USER")*/
                 .antMatchers("/dentistsList.html","/dentistNew.html","/patientsList.html","/patientNew.html")
                 .hasAuthority("ADMIN")
-                .antMatchers("/appointmentsList.html","/appointmentNew.html")
-                .hasAuthority("USER")
+                /*.antMatchers("/appointmentsList.html","/appointmentNew.html")
+                .hasAuthority("USER")*/
                 .anyRequest()
                 .authenticated()
                 .and()

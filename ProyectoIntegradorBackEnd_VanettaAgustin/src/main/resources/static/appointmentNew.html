@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/post_dentist.js"></script>
+    <script type="text/javascript" src="/js/post_app.js"></script>
     <link rel="stylesheet" href="./styles/home.css" />
 </head>
 <body>
@@ -16,27 +16,32 @@
     <div class="container">
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link" href="/dentistsList.html">Dentist administration</a>
+                <a class="nav-link" href="/appointmentsList.html">Appointment administration</a>
             </li>
         </ul>
 <div class="row">
     <div class="col-sm-7" style="background-color:#e9ecef; padding:10px; border-radius:3px">
-        <h3>Add Dentist</h3>
+        <h3>Add Appointment</h3>
         <form id="add_new_dentist">
             <div class="form-group">
-                <label class="control-label" for="nombre">Name:</label>
-                <input type="text" class="form-control" id="nombre"
-                       placeholder="Enter the name" name="nombre" required></input>
+                <label class="control-label" for="idpatient">Id Patient:</label>
+                <input type="text" class="form-control" id="idpatient"
+                       placeholder="Enter patient ID" name="idpatient" required></input>
             </div>
             <div class="form-group">
-                <label class="control-label" for="apellido">Lastname:</label>
-                <input type="text" class="form-control" id="apellido"
-                       placeholder="Enter the lastname" name="apellido" required></input>
+                <label class="control-label" for="iddentist">Id Dentist:</label>
+                <input type="text" class="form-control" id="iddentist"
+                       placeholder="Enter dentist ID" name="iddentist" required></input>
             </div>
             <div class="form-group">
-                <label class="control-label" for="apellido">Register:</label>
-                <input type="text" class="form-control" id="register"
-                       placeholder="Enter the register" name="register" required></input>
+                <label class="control-label" for="date">Date:</label>
+                <input type="text" class="form-control" id="date"
+                       placeholder="Enter the date" name="date" required></input>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="time">Hour:</label>
+                <input type="text" class="form-control" id="time"
+                       placeholder="Enter the hour" name="time" required></input>
             </div>
 
             <button type="submit" class="btn btn-danger" id="btn-add-new-student">Save</button>

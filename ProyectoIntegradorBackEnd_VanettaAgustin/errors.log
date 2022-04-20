@@ -32,3 +32,6 @@
 2022-04-18 09:59:55 ERROR GlobalExceptionHandler:18 - JSON parse error: Invalid numeric value: Leading zeroes not allowed; nested exception is com.fasterxml.jackson.core.JsonParseException: Invalid numeric value: Leading zeroes not allowed
  at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 17]
 2022-04-20 02:30:41 ERROR GlobalExceptionHandler:18 - No class IntegrativeProject.DentalClinic.Entities.Dentist entity with id 1 exists!
+2022-04-20 11:35:06 ERROR GlobalExceptionHandler:18 - Required request body is missing: public org.springframework.http.ResponseEntity<?> IntegrativeProject.DentalClinic.Controller.DentistController.create(IntegrativeProject.DentalClinic.Dto.DentistDTO)
+2022-04-20 11:36:59 ERROR GlobalExceptionHandler:18 - JSON parse error: Cannot construct instance of `java.sql.Time`, problem: `java.lang.IllegalArgumentException`; nested exception is com.fasterxml.jackson.databind.exc.ValueInstantiationException: Cannot construct instance of `java.sql.Time`, problem: `java.lang.IllegalArgumentException`
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 9, column: 13] (through reference chain: IntegrativeProject.DentalClinic.Dto.AppointmentDTO["time"])

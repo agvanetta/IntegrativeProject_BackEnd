@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Dentists</title>
+    <title>Appointments</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/get_dentist.js"></script>
-    <script type="text/javascript" src="/js/put_dentist.js"></script>
-    <script type="text/javascript" src="/js/delete_dentist.js"></script>
+    <script type="text/javascript" src="/js/get_app.js"></script>
+    <script type="text/javascript" src="/js/put_app.js"></script>
+    <script type="text/javascript" src="/js/delete_app.js"></script>
     <link rel="stylesheet" href="./styles/home.css" />
 </head>
 <body>
@@ -21,20 +21,21 @@
             <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/dentistsList.html">All</a>
+            <a class="nav-link" href="/appointmentsList.html">All</a>
         </li>
     </ul>
 
     <div id="div_student_table">
-        <h1>Dentist</h1>
-        <div class="row col-md-6 table-responsive">
+        <h1>Appointments</h1>
+        <div class="row col-md-6 table-responsive" id="container">
             <table id="dentistTable" class="table table-striped">
                 <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Name</th>
-                    <th>Lastname</th>
-                    <th>Register</th>
+                    <th>Patient</th>
+                    <th>Dentist</th>
+                    <th>Date</th>
+                    <th>Hour</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -50,19 +51,23 @@
             <form id="update_dentist_form">
                 <div class="form-group">
                     <label >Id:</label>
-                    <input type="text" class="form-control" id="dentist_id" readonly>
+                    <input type="text" class="form-control" id="appointment_id" readonly>
                 </div>
                 <div class="form-group">
                     <label >Name:</label>
-                    <input type="text" class="form-control" placeholder="Nombre" id="nombre">
+                    <input type="text" class="form-control" placeholder="Patient" id="patient">
                 </div>
                 <div class="form-group">
                     <label >LastName:</label>
-                    <input type="text" class="form-control" placeholder="Apellido" id="apellido">
+                    <input type="text" class="form-control" placeholder="Dentist" id="dentist">
                 </div>
                 <div class="form-group">
                     <label >Register:</label>
-                    <input type="text" class="form-control" placeholder="Register" id="register">
+                    <input type="text" class="form-control" placeholder="Date" id="date">
+                </div>
+                <div class="form-group">
+                    <label >Register:</label>
+                    <input type="text" class="form-control" placeholder="Hour" id="hour">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Change</button>
