@@ -46,6 +46,5 @@ public class DentistController {
     @GetMapping("/lists")
     public Collection<DentistDTO> findAll() {
         return dentistService.findAll();
-
     }
 }

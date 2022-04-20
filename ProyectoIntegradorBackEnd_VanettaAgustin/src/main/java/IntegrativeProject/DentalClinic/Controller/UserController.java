@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-
-
     @GetMapping("/user")
     public String user(){
         return "<h1> Hola usuario! </h1>";
@@ -18,5 +16,10 @@ public class UserController {
     @GetMapping("/admin")
     public String admin(){
         return "<h1> Hola admin! </h1>";
+    }
+
+    @GetMapping("/403")
+    public String error() {
+        return "<h1>Error 403: Acceso denegado o prohibido</h1>";
     }
 }
