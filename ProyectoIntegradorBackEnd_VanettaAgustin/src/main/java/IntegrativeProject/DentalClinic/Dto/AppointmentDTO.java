@@ -1,7 +1,5 @@
 package IntegrativeProject.DentalClinic.Dto;
 
-import IntegrativeProject.DentalClinic.Entities.Dentist;
-import IntegrativeProject.DentalClinic.Entities.Patient;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -10,8 +8,8 @@ import java.time.LocalDate;
 public class AppointmentDTO {
 
     private Integer id;
-    private Patient patient;
-    private Dentist dentist;
+    private PatientDTO patient;
+    private DentistDTO dentist;
     private LocalDate date;
     private String time;
 }

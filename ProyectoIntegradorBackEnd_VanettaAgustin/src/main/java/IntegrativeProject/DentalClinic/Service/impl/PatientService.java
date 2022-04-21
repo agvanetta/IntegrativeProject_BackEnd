@@ -2,7 +2,6 @@ package IntegrativeProject.DentalClinic.Service.impl;
 
 ;
 
-import IntegrativeProject.DentalClinic.Dto.PatientDTO;
 import IntegrativeProject.DentalClinic.Entities.Patient;
 import IntegrativeProject.DentalClinic.Repository.IPatientRepository;
 import IntegrativeProject.DentalClinic.Service.IPatientService;
@@ -30,17 +29,17 @@ public class PatientService implements IPatientService {
 
 // encontrar un usuario por id
     @Override
-    public PatientDTO findById(Integer id) {
+    public IntegrativeProject.DentalClinic.Dto.PatientDTO findById(Integer id) {
 
         Optional<Patient> patient = patientRepository.findById(id);
-        PatientDTO patientDTO = null;
+        IntegrativeProject.DentalClinic.Dto.PatientDTO patientDTO = null;
         if(patient.isPresent())
-            patientDTO = objectMapper.convertValue(patient, PatientDTO.class);
+            patientDTO = objectMapper.convertValue(patient, IntegrativeProject.DentalClinic.Dto.PatientDTO.class);
         return patientDTO;
     }
 // crear un usuario
     @Override
-    public PatientDTO create(PatientDTO patientDTO) {
+    public IntegrativeProject.DentalClinic.Dto.PatientDTO create(IntegrativeProject.DentalClinic.Dto.PatientDTO patientDTO) {
         Patient patient = objectMapper.convertValue(patientDTO, Patient.class);
         patientRepository.save(patient);
         return patientDTO;
@@ -55,7 +54,7 @@ public class PatientService implements IPatientService {
 
 // actualizar un usuario
     @Override
-    public PatientDTO update(PatientDTO patientDTO) {
+    public IntegrativeProject.DentalClinic.Dto.PatientDTO update(IntegrativeProject.DentalClinic.Dto.PatientDTO patientDTO) {
         Patient patient = objectMapper.convertValue(patientDTO, Patient.class);
         patientRepository.save(patient);
         return patientDTO;
@@ -63,11 +62,11 @@ public class PatientService implements IPatientService {
     }
 // listar todos los usuarios
     @Override
-    public Set<PatientDTO> findAll() {
+    public Set<IntegrativeProject.DentalClinic.Dto.PatientDTO> findAll() {
         List<Patient> patients = patientRepository.findAll();
-        Set<PatientDTO> patientDTOS = new HashSet<>();
+        Set<IntegrativeProject.DentalClinic.Dto.PatientDTO> patientDTOS = new HashSet<>();
         for (Patient patient : patients) {
-            patientDTOS.add(objectMapper.convertValue(patient, PatientDTO.class));
+            patientDTOS.add(objectMapper.convertValue(patient, IntegrativeProject.DentalClinic.Dto.PatientDTO.class));
         }
         return patientDTOS;
     }

@@ -1,6 +1,5 @@
 package IntegrativeProject.DentalClinic.Service.impl;
 
-import IntegrativeProject.DentalClinic.Dto.DentistDTO;
 import IntegrativeProject.DentalClinic.Entities.Dentist;
 import IntegrativeProject.DentalClinic.Repository.IDentistRepository;
 import IntegrativeProject.DentalClinic.Service.IDentistService;
@@ -24,16 +23,16 @@ public class DentistService implements IDentistService {
 
 
     @Override
-    public DentistDTO findById(Integer id) {
+    public IntegrativeProject.DentalClinic.Dto.DentistDTO findById(Integer id) {
         Optional<Dentist> dentist = dentistRepository.findById(id);
-        DentistDTO dentistDTO = null;
+        IntegrativeProject.DentalClinic.Dto.DentistDTO dentistDTO = null;
         if(dentist.isPresent())
-            dentistDTO = objectMapper.convertValue(dentist, DentistDTO.class);
+            dentistDTO = objectMapper.convertValue(dentist, IntegrativeProject.DentalClinic.Dto.DentistDTO.class);
         return dentistDTO;
     }
 
     @Override
-    public DentistDTO create(DentistDTO dentistDTO) {
+    public IntegrativeProject.DentalClinic.Dto.DentistDTO create(IntegrativeProject.DentalClinic.Dto.DentistDTO dentistDTO) {
        Dentist dentist = objectMapper.convertValue(dentistDTO, Dentist.class);
        dentist = dentistRepository.save(dentist);
        return dentistDTO;
@@ -45,18 +44,18 @@ dentistRepository.deleteById(id);
     }
 
     @Override
-    public DentistDTO update(DentistDTO dentistDTO) {
+    public IntegrativeProject.DentalClinic.Dto.DentistDTO update(IntegrativeProject.DentalClinic.Dto.DentistDTO dentistDTO) {
         Dentist dentist = objectMapper.convertValue(dentistDTO, Dentist.class);
         dentist = dentistRepository.save(dentist);
         return dentistDTO;
     }
 
     @Override
-    public Set<DentistDTO> findAll() {
+    public Set<IntegrativeProject.DentalClinic.Dto.DentistDTO> findAll() {
         List<Dentist> dentists = dentistRepository.findAll();
-        Set<DentistDTO> dentistDTOS = new HashSet<>();
+        Set<IntegrativeProject.DentalClinic.Dto.DentistDTO> dentistDTOS = new HashSet<>();
         for (Dentist dentist : dentists) {
-            dentistDTOS.add(objectMapper.convertValue(dentist, DentistDTO.class));
+            dentistDTOS.add(objectMapper.convertValue(dentist, IntegrativeProject.DentalClinic.Dto.DentistDTO.class));
         }
         return dentistDTOS;
     }
