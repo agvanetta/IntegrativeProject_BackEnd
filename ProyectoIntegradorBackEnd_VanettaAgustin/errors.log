@@ -55,3 +55,7 @@
  at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 51] (through reference chain: IntegrativeProject.DentalClinic.Dto.DentistDTO["register"])
 2022-04-21 15:06:05 ERROR GlobalExceptionHandler:17 - JSON parse error: Cannot deserialize value of type `int` from String "Cordoba": not a valid `int` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String "Cordoba": not a valid `int` value
  at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 51] (through reference chain: IntegrativeProject.DentalClinic.Dto.DentistDTO["register"])
+2022-04-22 00:26:28 ERROR GlobalExceptionHandler:17 - Required request body is missing: public org.springframework.http.ResponseEntity<?> IntegrativeProject.DentalClinic.Controller.DentistController.create(IntegrativeProject.DentalClinic.Dto.DentistDTO)
+2022-04-22 00:27:30 ERROR GlobalExceptionHandler:17 - Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "listis"
+2022-04-22 00:29:10 ERROR GlobalExceptionHandler:17 - Request method 'PUT' not supported
+2022-04-22 00:29:17 ERROR GlobalExceptionHandler:17 - Request method 'PUT' not supported
