@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "ad959712-41e4-4e06-bf10-54e5cff504a0",
+		"name": "Test_Back_End",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Delete Patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Diego Mariano\",\r\n        \"lastname\": \"Milito\",\r\n        \"register\": 112445\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/patients/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"name\":\"Gustavo\",\r\n    \"lastname\":\"Pantera\",\r\n    \"email\":\"pantera@gmail.com\",\r\n    \"dni\":37894126,\r\n    \"initDate\": \"2022-04-11\",\r\n    \"address\":{\r\n        \"street\":\"Guemes\",\r\n        \"number\":22,\r\n        \"city\":\"Cordoba\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/patients/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Patients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Diego Mariano\",\r\n        \"lastname\": \"Milito\",\r\n        \"register\": 112445\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/patients/lists",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Patient by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/patients/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Gustavo\",\r\n    \"lastname\":\"Bou\",\r\n    \"email\":\"pantera@gmail.com\",\r\n    \"dni\":37894126,\r\n    \"initDate\": \"2022-04-11\",\r\n    \"address\":{\r\n        \"street\":\"Guemes\",\r\n        \"number\":22,\r\n        \"city\":\"Cordoba\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/patients/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin@dh.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login ADMIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user@dh.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dentists",
+			"item": [
+				{
+					"name": "Create Dentist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Diego Alberto\",\r\n    \"lastname\":\"Milito\",\r\n    \"register\":112445\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dentists/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Dentist by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dentists/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Dentists",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Diego Mariano\",\r\n        \"lastname\": \"Milito\",\r\n        \"register\": 112445\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dentists/lists",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dentist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Diego Mariano\",\r\n        \"lastname\": \"Milito\",\r\n        \"register\": 112445\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dentists/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Dentist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Diego Mariano\",\r\n        \"lastname\": \"Milito\",\r\n        \"register\": 112445\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dentists/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "Create Appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient\":{\r\n        \"id\":1\r\n    },\r\n    \"dentist\":{\r\n        \"id\":6\r\n    },\r\n    \"date\":\"2022-04-17\",\r\n    \"time\":\"15:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointments/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Appointment by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/appointments/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Appointments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Diego Mariano\",\r\n        \"lastname\": \"Milito\",\r\n        \"register\": 112445\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointments/lists",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient\":{\r\n        \"id\":1\r\n    },\r\n    \"dentist\":{\r\n        \"id\":6\r\n    },\r\n    \"date\":\"2022-04-17\",\r\n    \"time\":\"16:30\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointments/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Diego Mariano\",\r\n        \"lastname\": \"Milito\",\r\n        \"register\": 112445\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/appointments/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
